@@ -15,6 +15,11 @@ public class EliminarPalabra
 
         // Dividir el texto en palabras
         String[] palabras = texto.split(" ");
+
+        // Agregar las frases al stack
+        for (String palabra : palabras) {
+            Stack_Palabras.push(palabra);
+        }
         
     }
 }
