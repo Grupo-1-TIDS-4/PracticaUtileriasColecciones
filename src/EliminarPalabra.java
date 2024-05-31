@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -8,7 +9,7 @@ public class EliminarPalabra
     {
          Scanner scanner = new Scanner(System.in);
 
-        Stack<String> Stack_Palabras = new Stack<>();
+        ArrayList<String> APalabras = new ArrayList<>();
 
         System.out.print("Ingresa un texto con muchas palabras:");
         String texto = scanner.nextLine();
@@ -18,8 +19,15 @@ public class EliminarPalabra
 
         // Agregar las frases al stack
         for (String palabra : palabras) {
-            Stack_Palabras.push(palabra);
-        }
+            APalabras.add(palabra);
+        }
+
+            // Eliminar la última palabra ingresada
+            APalabras.remove(APalabras.size() - 1);
+            System.out.println("Frase resultante: " + String.join(" ", APalabras));
+        
+
+        scanner.close();
         
     }
 }
